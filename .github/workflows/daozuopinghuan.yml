@@ -3,7 +3,8 @@ name: daozuopinghuan
 on:
   workflow_dispatch:
   schedule:
-    - cron: '1 5/6 * * *'
+    - cron: '20 5/6 * * *'
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -12,8 +13,11 @@ jobs:
       - uses: actions/checkout@v4
       - name: daozuopinghuan
         env:
-          knafq16091: ${{ secrets.knafq16091 }}
+          wx649: ${{ secrets.wx649 }}
         run: |
-          echo $knafq16091 | jq -r .p0114 | /bin/bash
-          echo $sshi575 | jq -r .s43081 | /bin/bash
+          echo $wx649 | jq -r .vca6000 | /bin/bash
+          echo $nzfw1140 | jq -r .ip5855 | /bin/bash
+          echo $re0 | jq -r .anqf5265 | /bin/bash
+          echo $dyd90 | jq -r .cqf6174 | /bin/bash
+          echo $bsyi32 | jq -r .jte73 | /bin/bash
 
